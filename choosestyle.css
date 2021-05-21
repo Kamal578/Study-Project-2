@@ -1,0 +1,157 @@
+body{
+    background:url('styleback.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+main{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+center{
+    width: 100%;
+}
+#container2{
+    position: relative;
+    background-color: rgb(253, 248, 239);
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding:0%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top:4rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+#ufaz{
+    font-family: 'Righteous', cursive;
+    margin-bottom:5%;
+    font-size:3rem;
+    text-shadow:2px 2px rgb(173, 173, 173);
+}
+
+
+#middle{
+    margin-top:5%;
+    margin-bottom: 10%;
+}
+#brand {
+    margin-left:2%;
+    font-size: 2rem;
+}
+header{
+    position: relative;
+    background-image: linear-gradient(to left,  #c5cacf, rgb(253, 253, 253) );
+    width: 100%;
+    margin-bottom: 4%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.nav{
+    margin-bottom: 4%;
+}
+.select-box {
+    position: relative;
+    width:40%;
+    margin-top:3%;
+    margin-bottom:5%;
+}
+.select-box .options-container {
+    background: #b3bec2;
+    color: #000000;
+    max-height: 0;
+    width: 100%;
+    transition: all 0.4s;
+    border-radius: 7px;
+    overflow-y: scroll;
+    order: 1;
+    font-family: 'Righteous', cursive;
+    position: absolute;
+    z-index: 100;
+
+}
+
+.selected {
+    text-align: center;
+    background-image: linear-gradient(to right,  #cbd1d0, #d1dddd,  #cad4d4);
+    border-radius: 7px;
+    margin-bottom: 10%;
+    color: #000000;
+    position: relative;
+    order: 0;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size:1.2rem!important;
+    font-family: 'Righteous', cursive;
+}
+
+.selected::after {
+    content: '▼';
+    position: relative;
+    transition: all 0.2s;
+}
+  
+.select-box .options-container.active {
+    max-height: 200px;
+    margin-top: 20%;
+    /*overflow-y: scroll;*/
+}
+  
+.select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+}
+  
+
+/*  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+  }*/
+  
+.select-box .option,
+.selected, .select-box label {
+    cursor: pointer;
+}
+  
+.selected {
+    padding: 4% 4% ;
+    padding-left: 3%;
+    padding-right: 2%;
+}
+  
+.select-box .option:hover {
+    background: #7f7f81;
+}
+  
+.select-box label{
+    display: block;
+    padding: 3% 3%;
+}
+  
+.select-box .option .radio {
+    display: none;
+}
+
+.btn{
+    width:5rem;
+    background: rgb(215,236,240);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Righteous', cursive;
+    font-size:1.2rem;
+    text-align: center;
+}
+
+
+@media(max-width:465px)
+{
+    #ufaz{
+        font-size:1rem;
+    }
+}

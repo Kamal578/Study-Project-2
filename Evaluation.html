@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UFAZ GPA CALCULATOR</title>
+    <link rel = "shortcut icon" type = "image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Oleo+Script&family=Amita&family=Leckerli+One&family=Exo:ital,wght@0,400;1,500&family=Patua+One&family=Kaushan+Script&family=Recursive&family=Courgette&family=Raleway:ital,wght@1,600&family=Montserrat+Alternates:ital,wght@1,500&family=Righteous&family=Volkhov:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald&family=Arvo:wght@400;700&family=Lobster+Two&family=Bebas+Neue&family=Exo:wght@500&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="Evaluation.css">
+    <title>L0S1</title>
+  </head>
+
+
+  <body>
+    <main>
+        <header>
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <div class="text text-wrap" id="brand" style="font-family: 'Bebas Neue', cursive;font-size:2rem;padding-left:1rem;">French-Azerbaijani University</div>
+                      <ul class="navbar-nav" style="margin-right: 1rem;">
+                        <li class="nav-item">
+                            <a class="nav-link" style = "font-size: 1.5rem;font-family: 'Oswald', sans-serif;" href="WELCOMEPAGE.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" style = "font-size: 1.5rem;font-family: 'Oswald', sans-serif;" href="info.html">About</a>
+                        </li>
+                      </ul>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Coef.Unit</th>
+                    <th scope="col">Grade 1</th>
+                    <th scope="col">Grade 2</th>
+                    <th scope="col">Grade 3</th>
+                    <th scope="col">Subject Average</th>
+                </tr>
+                </thead>
+
+                <tbody id="output_div">
+
+                    <script>
+
+                        var outputHTML = "";
+                        var subjects = ["Math","Physics","Chem","Math","Physics","Chem","Math","Physics","Chem"];
+                        var coef = ["3","3","3","3","3","3","3","3","3"];
+                        var coefgrade1 = [0.75,0.75];
+                        var coefgrade2 = [0.75,0.75];
+                        var coefgrade3 = [1.5,1.5];
+                        var grade1 = "<div class='input-group' id='input'><span class='input-group-text fw-bold' ></span><input type='text' class='form-control' id='gr1'></div>";
+                        var grade2 ="<div class='input-group' id='input'><span class='input-group-text fw-bold' ></span><input type='text' class='form-control' id='gr2'></div>";
+                        var grade3 = "<div class='input-group' id='input'><span class='input-group-text fw-bold' ></span><input type='text' class='form-control' id='gr3'></div>";
+                        var subjectaverage = "<div class='alert alert-dark text-center text-black-100' role='alert' id='subj'></div>";
+
+                        for (var i = 0;i<subjects.length; i++)
+                        {
+                            outputHTML += "<tr>";
+                            outputHTML += "<td>"+subjects[i]+"</td>";
+                            outputHTML += "<td>"+coef[i]+"</td>";
+                            outputHTML += "<td>"+grade1+"</td>";
+                            outputHTML += "<td>"+grade2+"</td>";
+                            outputHTML += "<td>"+grade3+"</td>";
+                            outputHTML += "<td>"+subjectaverage+"</td>";
+                            outputHTML += "</tr>";
+                        }
+
+                        document.getElementById("output_div").innerHTML = outputHTML;
+
+
+                        function gotop(){
+                            document.body.scrollTop = document.documentElement.scrollTop = 0;
+                        }
+                    </script>
+
+
+                </tbody>
+            </table>
+
+            <div class="container " id ="overall" >
+                <p>
+                    <h3>
+                    Your Overall Score:
+                    </h3>
+                </p>
+                <center>
+                    <p style = "background-color: #fff;padding:0.5rem; font-size: large; font-weight: bold;">
+                        Some Score
+                    </p>
+                    <p style = "font-size: medium;font-weight: bold;">
+                        out of 20
+                    </p>
+                </center>
+            </div>
+        </section>
+        <div style = "margin-top: 4rem;margin-bottom: 2rem;">
+            <center>
+                <a class="btn btn-lg" href="choosetry.html" style = "margin-right: 3.5rem;background-color: rgb(103, 165, 157, 0.575);"role="button">Back</a>
+                <button class="btn btn-lg"  onclick = 'gotop()'  type="button" style = "background-color: rgb(103, 165, 157, 0.575)">Evaluate</button>
+            </center>
+        </div>
+
+
+
+
+    </main>
+
+
+
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="text-wrap fs-4" style="font-family: 'Courgette', cursive; font-weight: 600;text-align: center;">
+                    Contact us
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <span style="font-family: 'Courgette', cursive;font-size:1.5rem; font-weight: 600;">E-mail</span>
+                    <div>
+                        <i class="fa fa-envelope" aria-hidden="true" >
+                            <span style="font-size:1.1rem;font-family: 'Courgette', cursive;">member1@ufaz.az</span>
+                        </i>
+
+                        <i class="fa fa-envelope" aria-hidden="true" id ="member" style="padding-left:1rem;">
+                            <span style="font-size:1.1rem;font-family: 'Courgette', cursive;">member3@ufaz.az</span>
+                        </i>
+                        <br>
+                        <i class="fa fa-envelope" aria-hidden="true" >
+                            <span style="font-size:1.1rem;font-family: 'Courgette', cursive;">member2@ufaz.az</span>
+                        </i>
+
+                        <i class="fa fa-envelope" aria-hidden="true" id ="member" style="padding-left:1rem;">
+                            <span style="font-size:1.1rem;font-family: 'Courgette', cursive;">member4@ufaz.az</span>
+                        </i>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <span style="font-family: 'Courgette', cursive;font-size:1.5rem; font-weight: 600;">Follow</span>
+                    <div><a id = "follow"><i class="fa fa-instagram" aria-hidden="true"><span style="font-size:1.1rem;font-family: 'Courgette', cursive;"> Instagram </span></i></a></div>
+                    <div><a id = "follow"><i class="fa fa-facebook" aria-hidden="true"> <span style="font-size:1.1rem;font-family: 'Courgette', cursive;"> Facebook </span></i></a></div>
+                    <div><a id = "follow"><i class="fa fa-telegram" aria-hidden="true"> <span style="font-size:1.1rem;font-family: 'Courgette', cursive;"> Telegram </span></i></a></div>
+
+                </div>
+
+            </div>
+
+          </div>
+
+   
+    </footer>
+
+
+
+  </body>
+
+
+
+</html>

@@ -1,0 +1,103 @@
+
+#brand {
+    margin-left:1rem;
+    font-size: 2rem;
+}
+
+header{
+    max-width: 100%;
+    margin-bottom: auto;
+    background-image: linear-gradient(to left,  #c5cacf, rgb(253, 253, 253) );
+}
+
+main {
+    background-image: url('Absolute_Palais_Universitaire_01.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    -webkit-background-size:cover;
+    max-height:100%;   
+    padding-top: 15%;
+    padding-bottom:15%;
+}
+
+#welcome {
+    top:30%;
+    text-align: center;
+    width: 40%; 
+    bottom:30%;
+}
+@media (max-width: 800px) 
+{
+    main {
+      height:60rem;
+    }
+    footer{
+        position: relative;
+    }
+    #welcome{
+        width: 100%;
+    }
+}
+
+.btn{
+    background-color: rgb(229, 186, 182);
+    border-style: solid;
+    border-color:rgb(214, 170, 165);
+    border-width: medium;
+    border-radius:15%;
+    font-family:'Courgette', cursive;
+    font-weight: 600;
+    margin-top:5%;
+}
+
+footer {  
+    position: relative;  
+    bottom: 0%;  
+    width: 100%;  
+    height: 35%;
+    padding-top:1%;
+    padding-bottom:1%;
+    background-image: linear-gradient(to bottom right,white,#c5cacf); 
+    color: black;  
+
+}  
+
+#contacts{
+    display: flex;
+    padding-left:10%;
+}
+
+#left{
+    flex-basis: 70%;
+
+}
+#center{
+    flex-basis: 45%;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+#follow:link{
+    color:black;
+}
+#follow:hover{
+    color:gray;
+}
+
+@media(max-width:383px){
+    #member{
+        padding-left:0;
+    }
+}
+
+.row{
+    text-align:center;
+}
